@@ -13,8 +13,14 @@
 
 get_header(); ?>
 
+
+<?php if(is_front_page()){  get_template_part( 'template-parts/content-home', 'none' ); }else{ ?>
+
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+
+		
 
 		<?php if ( have_posts() ) : ?>
 
@@ -41,8 +47,13 @@ get_header(); ?>
 
 		<?php endif; ?>
 
+		
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
+
+<?php } ?>
+
 <?php get_footer(); ?>
